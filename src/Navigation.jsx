@@ -1,20 +1,39 @@
+import { useEffect } from 'react';
 import './navigation.css'
+import NavButton from './Button';
+
+
 export default function Navigation(){
 
+    useEffect(() => {
+        alert(`New route: ${location.pathname}`);
+    }, [window.location.pathname]);
 
     return(
+
         <nav className = "navigation">
             <li className = "nav-item">
-                <button className = "nav-link" href="#">Link1</button>
+                <NavButton
+                name = "Home"
+                cssClass = "homeTab nav-button"
+                link = "home"
+                />
             </li>
-
             <li className = "nav-item">
-                <button className = "nav-link" href="#">Link2</button>
+                <NavButton
+                name = "My Story"
+                cssClass = "myStoryTab nav-button"
+                link = "my-story"
+                />
             </li>
-
             <li className = "nav-item">
-                <button className = "nav-link" href="#">Link3</button>
+                <NavButton
+                name = "Portfolio"
+                cssClass = "portfolioTab nav-button"
+                link = "portfolio"
+                />
             </li>
         </nav>
+
     );
 }

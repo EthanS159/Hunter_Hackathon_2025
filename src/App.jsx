@@ -1,8 +1,8 @@
 import Navigation from "./Navigation";
-function App() {
+
+export default function App() {
+
   return(
     <Navigation/>
   );
 }
-
-export default App

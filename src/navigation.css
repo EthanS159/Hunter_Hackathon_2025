@@ -1,3 +1,6 @@
+html, body{
+    margin:0;
+}
 .navigation{
     max-height: 50px;
     background-color: antiquewhite;
@@ -7,9 +10,19 @@
 .nav-item{
     list-style: none;
 }
-.nav-link{
-    padding:6px;
+.nav-button{
+    padding:7px;
     border:none;
-    color:red;
+    background-color:rgb(40, 199, 202, 1);
     font-size:18px;
+}
+.nav-button a{
+    text-decoration:none;
+    color:rgb(253, 253, 253, 1);
+}
+.nav-button:hover{
+    cursor:pointer;
+    background-color:rgb(28, 138, 140);
+    font-weight:bold;
+    transform:scale(1.2);
 }
